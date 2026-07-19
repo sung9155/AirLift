@@ -2,6 +2,10 @@
 
 Windows 소리를 AirPlay(RAOP) 스피커로 보내는 **트레이 상주 프로그램**.
 
+[English documentation](README.md)
+
+<img src="docs/screenshot.png" alt="AirLift 트레이 메뉴" width="360">
+
 ## 사용법
 
 1. `AirLift.exe` 실행 → 작업 표시줄 트레이에 아이콘 생성

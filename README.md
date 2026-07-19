@@ -4,6 +4,8 @@ Stream Windows system audio to AirPlay (RAOP) speakers. Lives in the system tray
 
 [한국어 문서 (Korean)](README.ko.md)
 
+<img src="docs/screenshot.png" alt="AirLift tray menu" width="360">
+
 ## Features
 
 - **mDNS discovery** of AirPlay speakers, one-click connect from the tray menu
