@@ -1,0 +1,7 @@
+bin/
+obj/
+installer/publish/
+installer/.wix/
+installer/*.msi
+installer/*.wixpdb
+*.user
