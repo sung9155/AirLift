@@ -212,6 +212,10 @@ public sealed class TrayApp : ApplicationContext
             var target = _speakers.FirstOrDefault(s => s.Name == _settings.LastSpeakerName);
             if (target != null)
                 await ConnectAsync(target);
+            // mDNS can miss the speaker in a single scan window, and the first
+            // connect can fail - fall back to the reconnect loop (scan + backoff)
+            if (!_engine.IsConnected)
+                StartReconnect();
         }
     }
 
