@@ -1,7 +1,7 @@
 using System.Net;
 using Zeroconf;
 
-namespace AirOutput;
+namespace AirLift;
 
 public sealed record SpeakerInfo(
     string Name,

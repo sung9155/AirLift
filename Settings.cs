@@ -1,6 +1,6 @@
 using System.Text.Json;
 
-namespace AirOutput;
+namespace AirLift;
 
 public sealed class Settings
 {
@@ -21,12 +21,24 @@ public sealed class Settings
 
     private static string FilePath => Path.Combine(
         Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData),
-        "AirOutput", "settings.json");
+        "AirLift", "settings.json");
 
     public static Settings Load()
     {
         try
         {
+            // One-time migration from the pre-rename config location
+            if (!File.Exists(FilePath))
+            {
+                var old = Path.Combine(
+                    Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData),
+                    "AirOutput", "settings.json");
+                if (File.Exists(old))
+                {
+                    Directory.CreateDirectory(Path.GetDirectoryName(FilePath)!);
+                    File.Copy(old, FilePath);
+                }
+            }
             if (File.Exists(FilePath))
                 return JsonSerializer.Deserialize<Settings>(File.ReadAllText(FilePath)) ?? new Settings();
         }

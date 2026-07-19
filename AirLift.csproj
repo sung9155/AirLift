@@ -6,8 +6,8 @@
     <UseWindowsForms>true</UseWindowsForms>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-    <AssemblyTitle>AirOutput</AssemblyTitle>
-    <Product>AirOutput</Product>
+    <AssemblyTitle>AirLift</AssemblyTitle>
+    <Product>AirLift</Product>
   </PropertyGroup>
 
   <ItemGroup>

@@ -1,4 +1,4 @@
-namespace AirOutput;
+namespace AirLift;
 
 /// <summary>UI string table. Language: "ko" or "en".</summary>
 public static class L
@@ -46,21 +46,21 @@ public static class L
     public static string InputLabel(string name) => T($"입력: {name}", $"Input: {name}");
     public static string MutedLabel => T("음소거", "Muted");
     public static string AlreadyRunning =>
-        T("AirOutput이 이미 실행 중입니다. 트레이 아이콘을 확인하세요.",
-          "AirOutput is already running. Check the tray icon.");
-    public static string VbDialogTitle => T("AirOutput - 가상 출력 장치", "AirOutput - Virtual output device");
+        T("AirLift이 이미 실행 중입니다. 트레이 아이콘을 확인하세요.",
+          "AirLift is already running. Check the tray icon.");
+    public static string VbDialogTitle => T("AirLift - 가상 출력 장치", "AirLift - Virtual output device");
     public static string VbDialogBody(bool installed, string? deviceName) =>
         T("AirPlay 스피커를 Windows '출력 장치'처럼 쓰려면 가상 오디오 케이블이 필요합니다.\n\n" +
           "1. VB-CABLE 드라이버 설치 (무료)\n" +
           "2. Windows 소리 설정에서 출력 장치를 \"CABLE Input\"으로 선택\n" +
-          "3. AirOutput의 [입력 소스]에서 \"CABLE Input\" 선택 (설치돼 있으면 자동 선택)\n" +
+          "3. AirLift의 [입력 소스]에서 \"CABLE Input\" 선택 (설치돼 있으면 자동 선택)\n" +
           "4. 스피커 연결 - 이제 모든 소리가 AirPlay로만 나갑니다\n\n" +
           (installed ? $"현재 상태: 가상 케이블 감지됨 ({deviceName})"
                      : "현재 상태: 가상 케이블 없음. 다운로드 페이지를 열까요?"),
           "To use an AirPlay speaker like a Windows output device, a virtual audio cable is required.\n\n" +
           "1. Install the VB-CABLE driver (free)\n" +
           "2. In Windows sound settings, select \"CABLE Input\" as the output device\n" +
-          "3. In AirOutput's [Input source], select \"CABLE Input\" (auto-selected if installed)\n" +
+          "3. In AirLift's [Input source], select \"CABLE Input\" (auto-selected if installed)\n" +
           "4. Connect a speaker - all sound now goes to AirPlay only\n\n" +
           (installed ? $"Status: virtual cable detected ({deviceName})"
                      : "Status: no virtual cable found. Open the download page?"));

@@ -1,6 +1,6 @@
 using NAudio.CoreAudioApi;
 
-namespace AirOutput;
+namespace AirLift;
 
 /// <summary>Hidden CLI diagnostics: run with --dump-devices or --peak-test (output via redirected stdout).</summary>
 public static class Diagnostics

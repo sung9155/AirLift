@@ -1,7 +1,7 @@
 using System.Diagnostics;
 using System.Runtime.InteropServices;
 
-namespace AirOutput;
+namespace AirLift;
 
 /// <summary>
 /// Owns one streaming session: RAOP client + audio capture + paced send thread.
@@ -93,7 +93,7 @@ public sealed class StreamEngine : IDisposable
         int silencePackets = 0, clears = 0;
         string statsPath = Path.Combine(
             Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData),
-            "AirOutput", "stream.log");
+            "AirLift", "stream.log");
 
         timeBeginPeriod(1); // 1 ms sleep granularity - default 15.6 ms causes packet bursts
         try

@@ -3,7 +3,7 @@ using System.Net.Sockets;
 using System.Security.Cryptography;
 using System.Text;
 
-namespace AirOutput;
+namespace AirLift;
 
 /// <summary>
 /// RAOP (AirPlay v1 audio) sender: RTSP session management plus RTP audio,

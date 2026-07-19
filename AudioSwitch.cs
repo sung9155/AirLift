@@ -1,7 +1,7 @@
 using System.Runtime.InteropServices;
 using NAudio.CoreAudioApi;
 
-namespace AirOutput;
+namespace AirLift;
 
 /// <summary>
 /// Switches the Windows default render device via the undocumented (but

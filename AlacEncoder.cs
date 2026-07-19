@@ -1,4 +1,4 @@
-namespace AirOutput;
+namespace AirLift;
 
 /// <summary>
 /// Wraps raw 16-bit stereo PCM into Apple Lossless (ALAC) frames using the

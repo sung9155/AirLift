@@ -1,4 +1,4 @@
-namespace AirOutput;
+namespace AirLift;
 
 /// <summary>NTP timestamp helpers (seconds since 1900-01-01 + 32-bit fraction).</summary>
 public static class NtpTime

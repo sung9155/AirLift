@@ -2,7 +2,7 @@ using NAudio.CoreAudioApi;
 using NAudio.Wave;
 using NAudio.Wave.SampleProviders;
 
-namespace AirOutput;
+namespace AirLift;
 
 /// <summary>
 /// Captures audio played to a render (output) device via WASAPI loopback and

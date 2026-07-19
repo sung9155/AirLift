@@ -1,12 +1,12 @@
 using System.Diagnostics;
 using Microsoft.Win32;
 
-namespace AirOutput;
+namespace AirLift;
 
 public sealed class TrayApp : ApplicationContext
 {
     private const string RunKeyPath = @"Software\Microsoft\Windows\CurrentVersion\Run";
-    private const string RunValueName = "AirOutput";
+    private const string RunValueName = "AirLift";
     private const string VbCableUrl = "https://vb-audio.com/Cable/";
 
     private readonly NotifyIcon _trayIcon;
@@ -489,7 +489,7 @@ public sealed class TrayApp : ApplicationContext
         _muteItem.Checked = _muted;
         _lastIconStep = int.MinValue; // force meter icon refresh
         UpdateMeterIcon();
-        var tip = $"AirOutput - {text}";
+        var tip = $"AirLift - {text}";
         _trayIcon.Text = tip.Length <= 63 ? tip : tip[..63]; // NotifyIcon text limit
 
         foreach (var item in _speakersMenu.DropDownItems.OfType<ToolStripMenuItem>())
@@ -497,7 +497,7 @@ public sealed class TrayApp : ApplicationContext
     }
 
     private void Balloon(string title, string text, ToolTipIcon icon)
-        => _trayIcon.ShowBalloonTip(3000, $"AirOutput - {title}", text, icon);
+        => _trayIcon.ShowBalloonTip(3000, $"AirLift - {title}", text, icon);
 
     private void ShowVbCableInfo()
     {

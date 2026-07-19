@@ -1,4 +1,4 @@
-namespace AirOutput;
+namespace AirLift;
 
 internal sealed class DualWriter(TextWriter a, TextWriter b) : TextWriter
 {
@@ -32,15 +32,15 @@ internal static class Program
             {
                 Console.WriteLine($"DIAG ERROR: {ex}");
             }
-            File.WriteAllText(Path.Combine(Path.GetTempPath(), "airoutput-diag.log"), log.ToString());
+            File.WriteAllText(Path.Combine(Path.GetTempPath(), "airlift-diag.log"), log.ToString());
             return;
         }
 
-        using var mutex = new Mutex(true, "AirOutput_SingleInstance", out bool createdNew);
+        using var mutex = new Mutex(true, "AirLift_SingleInstance", out bool createdNew);
         if (!createdNew)
         {
             L.Lang = Settings.Load().Language;
-            MessageBox.Show(L.AlreadyRunning, "AirOutput", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show(L.AlreadyRunning, "AirLift", MessageBoxButtons.OK, MessageBoxIcon.Information);
             return;
         }
 
